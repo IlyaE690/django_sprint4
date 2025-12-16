@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
 ]
 
 handler403 = 'blog.views.csrf_failure'
